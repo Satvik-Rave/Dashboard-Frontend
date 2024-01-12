@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Rapid Quest</title>
+    <!-- <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+        </script>
+        <script type = "text/javascript">
+            google.charts.load('current', {packages: ['corechart']});     
+        </script> -->
+        <!-- <script src="path/to/chartjs/dist/chart.umd.js"></script> -->
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav1 nav">
+            <!-- <h1>Hello world</h1> -->
+            <img src="./png/logo.png" alt="Logo" class="logo icon">
+            <img src="./png/001-search.png" alt="Search" class="icon search">
+        </div>
+        <div class="nav2 nav">
+            <img src="./png/002-hut.png" alt="Home" class="icon">
+            <img src="./png/008-documents.png" alt="File" class="icon">
+            <img src="./png/003-list.png" alt="List" class="icon">
+            <img src="./png/004-user.png" alt="User" class="icon">
+        </div>
+        <div class="nav3 nav">
+            <img src="./png/007-notification.png" alt="Bell" class="icon">
+            <img src="./png/006-exit.png" alt="User" class="icon">
+        </div>
+    </header>
+    <div class="left">
+        <div class="l1">
+            <img src="./png/title2.jpeg" alt="Title">
+            <div class="txt">
+                <span>Hi Mike,</span>
+                <br>
+                <span>Welcome Back</span>
+            </div>
+        </div>
+        <div class="l2">
+            <div>
+                <span class="mgn" style="font-size: 1rem; padding-bottom: 1%;">
+                    <b>Today</b>
+                </span><br>
+            </div>
+            <div>
+                <span class="mgn" style="font-size: 1.2rem;">
+                    <b>$19,892</b>
+                </span><br>
+                <span class="mgn" style="font-size: 0.8rem; color: #6d6d6d;">
+                    Account Balance
+                </span><br>
+            </div>
+            <div>
+                <span class="mgn" style="font-size: 1rem;">
+                    <b>$4,000</b>
+                </span><br>
+                <span class="mgn" style="font-size: 0.8rem; color: #6d6d6d;">
+                    Year-to-Date Contributions
+                </span><br>
+            </div>
+            <div>
+                <span class="mgn" style="font-size: 1rem;">
+                    <b>$1,892</b>
+                </span><br>
+                <span class="mgn" style="font-size: 0.8rem; color: #6d6d6d;">
+                    Total Interest
+                </span><br>
+            </div>
+            <select name="select" id="select">
+                <option value="option1">I want to</option>
+                <option value="option2">Option2</option>
+                <option value="option3">Option3</option>
+            </select>
+
+        </div>
+        <div class="l3">
+            <span style="font-size: 1rem; padding-bottom: 1%;">
+                <b>Recent Transactions</b>
+            </span><br>
+            <div>
+                <span style="font-size: 0.8rem; color: #6d6d6d;">
+                    2020-08-07
+                </span><br>
+                <span style="font-size: 0.8rem; color: black;">
+                    <b>Withdrawl Transfer to Bank-XXX11</b>
+                </span>
+            </div>
+            <hr>
+            <div>
+                <span style="font-size: 0.8rem; color: #6d6d6d;">
+                    2020-07-21
+                </span><br>
+                <span style="font-size: 0.8rem; color: black;">
+                    <b>Withdrawl Transfer to Bank-XXX11</b>
+                </span>
+            </div>
+            <hr>
+            <div>
+                <span style="font-size: 0.8rem; color: #6d6d6d;">
+                    2020-07-16
+                </span><br>
+                <span style="font-size: 0.8rem; color: black;">
+                    <b>Withdrawl Transfer to Bank-XXX11</b>
+                </span>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <div class="mid">
+        <div class="m1">
+            <div class="m1txt">
+                <span style="font-size: 0.8rem;">
+                    Retirement Income
+                </span>
+                <h3>
+                    Starting year 2056
+                </h3>
+            </div>
+            <div class="m1blocks">
+                <div class="m1b">
+                    <h3><b>
+                            $300,000
+                        </b></h3>
+                        <br>
+                    <span style="font-size: 0.8rem; margin-top: 2%;">
+                        My Goal
+                    </span>
+                </div>
+                <div class="m1b">
+                    <h3><b>
+                            59%
+                        </b></h3><br>
+                    <span style="font-size: 0.8rem;">
+                        Goal Achieved
+                    </span>
+                </div>
+                <div class="m1b">
+                    <h3><b>
+                            $300
+                        </b></h3><br>
+                    <span style="font-size: 0.8rem;">
+                        Est. Monthly Income
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="m2">
+            <h4>
+                Contributions Overtime
+            </h4>
+            <div style="display: flex; justify-content: center;">
+                <canvas id="myChart">
+                </canvas>
+            </div>
+        </div>
+        <div class="m3">
+            <h4>
+                How do I compare to my peers?
+            </h4>
+            <span style="font-size: 0.8rem; color:#6d6d6d;">
+                These numbers represent current goal achievement.
+            </span>
+            <div class="pies">
+                <div class="pietxt">
+                    <span><b>Age:</b> Under 30</span>
+                    <hr>
+                    <span><b>Salary:</b> K 20-K 30</span>
+                    <hr>
+                    <span><b>Gender:</b> Male</span>
+                </div>
+                <div class="d1">
+                    <span class="doughnut1 doughnut" data-value="65"><progress class="test1" value="65"
+                            max="100"></progress></span>
+                    <span style="font-size: 0.8rem;">Average</span>
+                </div>
+                <div class="d2">
+                    <span class="doughnut2 doughnut" data-value="65"><progress class="test2" value="65"
+                            max="100"></progress></span>
+                    <span style="font-size: 0.8rem;">Top</span>
+                </div>
+                <div class="d3">
+                    <span class="doughnut3 doughnut" data-value="65"><progress class="test3" value="65"
+                            max="100"></progress></span>
+                    <span style="font-size: 0.8rem;">Me</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="rbox1">
+            <div class="up">
+                <h3 style="font-size: 15px;">Retirement Strategy</h3>
+            </div>
+            <div class="bars">
+                <span style="font-size: 11px;">Employer Contribution</span>
+                <div class="bar">
+                    <div class="bfixed">
+                        <div class="b1">
+                        </div>
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div id="num1">75%</div>
+                </div>
+                <span style="font-size: 11px; margin-top: 2ch;">Retirement Age</span>
+                <div class="bar">
+                    <div class="bfixed">
+                        <div class="b2">
+                        </div>
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div id="num2">75</div>
+                </div>
+            </div>
+            <div class="down">
+                <span style="font-size: 11px;">Employer Contribution &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4%</span>
+                <span style="font-size: 11px; margin-top: 2ch;">Interest Rate
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    5%</span>
+                <button class="btn">
+                    Update
+                </button>
+                <a href="" style="text-decoration: none; font-size: 11px; margin-top: 2ch;"><b>View Help Docs ></b></a>
+            </div>
+        </div>
+        <div class="rbox2">
+            <span style="font-size: 13px; margin: 10px 10px 0 10px;">
+                Are you considering a<br>
+                <b>Housing Advance?</b>
+            </span>
+            <span style="font-size: 11px; margin: 10px 10px 0 10px;">
+                Limited time reduced interest
+            </span>
+            <a href="" style="text-decoration: none; font-size: 11px; margin: 10px 10px 0 10px;"><b>Learn More ></b></a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
