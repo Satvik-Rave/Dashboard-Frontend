@@ -428,5 +428,17 @@ progress{
     .l3{
         margin: 0;
     }
-    
+
+    .mid{
+        width: 100%;
+        height: 140ch;
+    }
+    .m1blocks{
+        flex-direction: column !important;
+    }
+    .m1rows{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3%;
+    }
 }
