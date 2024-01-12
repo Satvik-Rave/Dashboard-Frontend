@@ -20,7 +20,7 @@ document.querySelector(".test3").setAttribute("value", pieValue3);
 document.querySelector(".test3").style.background = `conic-gradient(#22d6aa ${pieValue3}%, lightgrey 0)`;
 
 const DATA_COUNT = 7;
-const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
+const NUMBER_CFG = { count: DATA_COUNT, min: -100, max: 100 };
 
 // const labels = Utils.months({count: 7});
 const ctx = document.getElementById('myChart');
@@ -28,25 +28,25 @@ const ctx = document.getElementById('myChart');
 new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["20","25","30","35","40","50","55","60","65","70","75","80"],
+        labels: ["20", "25", "30", "35", "40", "50", "55", "60", "65", "70", "75", "80"],
         datasets: [
-          {
-            label: 'Employer',
-            data: [10,15,21,25,30,34,40,45,51,56,61,66],
-            backgroundColor: "#0800a3",
-          },
-          {
-            label: 'Employee',
-            data: [15,22,26,30,35,40,44,50,55,61,65,70],
-            backgroundColor: "#4935ff",
-          },
-          {
-            label: 'Total Interest',
-            data: [25,37,47,55,65,74,84,95,106,117,126,136],
-            backgroundColor: "#85afff",
-          },
+            {
+                label: 'Employer',
+                data: [10, 15, 21, 25, 30, 34, 40, 45, 51, 56, 61, 66],
+                backgroundColor: "#0800a3",
+            },
+            {
+                label: 'Employee',
+                data: [15, 22, 26, 30, 35, 40, 44, 50, 55, 61, 65, 70],
+                backgroundColor: "#4935ff",
+            },
+            {
+                label: 'Total Interest',
+                data: [25, 37, 47, 55, 65, 74, 84, 95, 106, 117, 126, 136],
+                backgroundColor: "#85afff",
+            },
         ]
-      },
+    },
     options: {
         scales: {
             x: {
@@ -59,4 +59,4 @@ new Chart(ctx, {
     }
 });
 // document.getElementById("myChart").style.width=;
-document.getElementById("myChart").style.height="170px";
+document.getElementById("myChart").style.height = "170px";

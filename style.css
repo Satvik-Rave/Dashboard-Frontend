@@ -9,34 +9,42 @@ body {
 
 header {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     height: 70ch;
     width: 5%;
     align-items: center;
     justify-content: space-between;
     background-color: white;
 }
-.nav1, .nav2, .nav3 {
+
+.nav1,
+.nav2,
+.nav3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
-.nav img:hover{
+
+.nav img:hover {
     padding: 15%;
     background-color: #4935ff;
     color: white;
     border-radius: 5px;
 }
-.nav1{
+
+.nav1 {
     height: 13%;
 }
-.nav2{
+
+.nav2 {
     height: 25%;
 }
-.nav3{
+
+.nav3 {
     height: 10%;
 }
+
 .icon {
     width: 20px;
 }
@@ -46,6 +54,7 @@ header {
     /* margin-top: 20px; */
     /* margin-left: -3px; */
 }
+
 .left {
     display: flex;
     flex-direction: column;
@@ -137,6 +146,12 @@ header {
     margin-bottom: 5%;
 }
 
+.m1rows {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
 .m1blocks {
     display: flex;
     justify-content: space-between;
@@ -167,37 +182,46 @@ progress {
     -webkit-appearance: none;
     appearance: none;
 }
+
 ::-moz-progress-bar {
     visibility: hidden;
 }
+
 ::-ms-fill {
     display: none;
 }
+
 ::-webkit-progress-inner-element,
 ::-webkit-progress-bar,
 ::-webkit-progress-value {
     display: none;
 }
+
 .doughnut {
     position: relative;
     width: 80px;
     height: 80px;
 }
-progress{
+
+progress {
     width: 100%;
     height: 100%;
     border: 0;
     border-radius: 50%;
 }
+
 .doughnut1 progress {
     background: conic-gradient(#22d6aa 40%, lightgrey 0);
 }
+
 .doughnut2 progress {
     background: conic-gradient(#22d6aa 40%, lightgrey 0);
 }
+
 .doughnut3 progress {
     background: conic-gradient(#22d6aa 40%, lightgrey 0);
 }
+
 .doughnut::before {
     content: attr(data-value) "%";
     position: absolute;
@@ -212,26 +236,38 @@ progress{
     justify-content: center;
     font-weight: 700;
 }
-.pies{
+
+.pies {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     margin-top: 4%;
 }
-.pietxt{
+
+.pietxt {
     font-size: 0.8rem;
     display: flex;
+    width: 25%;
     flex-direction: column;
     height: 90%;
     justify-content: space-between;
 }
-.d1,.d2,.d3{
+
+.d1,
+.d2,
+.d3 {
     height: 105%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.dss {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .right {
@@ -338,6 +374,13 @@ progress{
     align-items: center;
 }
 
+.down1,
+.down2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .rbox2 {
     display: flex;
     /* align-items: center; */
@@ -361,19 +404,21 @@ progress{
 }
 
 @media only screen and (max-width:500px) {
-    body{
+    body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .left{
+
+    .left {
         width: 75% !important;
         height: 70ch !important;
         margin: 7% 0 15% 0;
         border-radius: 20px;
         align-items: center;
     }
-    header{
+
+    header {
         flex-direction: row;
         position: sticky;
         bottom: 0;
@@ -383,62 +428,199 @@ progress{
         right: 0;
         z-index: 5;
     }
-    .l1{
+
+    .l1 {
         width: 70%;
         justify-content: center;
         margin: 0 15% 0 15% !important;
     }
-    .l2{
+
+    .l2 {
         width: 70% !important;
         height: 25ch;
         margin: 0 15% 0 15% !important;
     }
-    .rows{
+
+    .rows {
         display: flex;
         justify-content: space-between;
     }
-    .rowsfont{
+
+    .rowsfont {
         font-size: 0.7rem !important;
     }
-    .bigfont{
+
+    .bigfont {
         font-size: 2rem !important;
     }
-    .l2 span{
+
+    .l2 span {
         padding: 0;
     }
-    .nav1, .nav2, .nav3 {
-        flex-direction: row !important; 
+
+    .nav1,
+    .nav2,
+    .nav3 {
+        flex-direction: row !important;
     }
-    .l1 img{
+
+    .l1 img {
         width: 80px !important;
         height: 80px !important;
     }
-    .txt{
+
+    .txt {
         font-size: 1.5rem;
         /* text-align: center; */
     }
-    .txt span:last-child{
+
+    .txt span:last-child {
         font-size: 0.8rem;
     }
-    #select{
+
+    #select {
         margin: 0 !important;
         width: 100%;
         text-align: center;
     }
-    .l3{
+
+    .l3 {
         margin: 0;
     }
 
-    .mid{
-        width: 100%;
-        height: 140ch;
+    .m1 {
+        height: 20%;
+        margin: 0;
     }
-    .m1blocks{
+
+    .mid {
+        width: 100%;
+        align-items: center;
+        /* margin: 0 15% 0 15%; */
+        height: 140ch;
+        justify-content: space-between;
+    }
+
+    .m1blocks {
         flex-direction: column !important;
     }
-    .m1rows{
+
+    .m1rows {
         display: flex;
         justify-content: space-between;
         margin-top: 3%;
     }
+
+    .m2 {
+        height: 35%;
+        margin: 0;
+        /* margin-top: 20%; */
+    }
+
+    .m2 h4 {
+        padding-bottom: 5%;
+        font-size: 1.5rem;
+    }
+
+    .m3 {
+        height: 30%;
+        margin: 0;
+        /* margin-top: 30%; */
+    }
+
+    .pies {
+        flex-direction: column;
+        height: 65%;
+        margin-top: 10%;
+        /* justify-content: flex-start; */
+        /* align-items: flex-start; */
+    }
+
+    .pietxt {
+        width: 100%;
+        height: 45%;
+        justify-content: none;
+    }
+
+    .dss {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+        height: 100%;
+    }
+
+    .rbox1 {
+        margin: 0;
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .rbox2 {
+        /* visibility: hidden; */
+        display: none;
+    }
+
+    .up {
+        width: 80%;
+        /* margin: 0 10% 0 10%; */
+    }
+
+    .up h3 {
+        font-size: 20px !important;
+        width: 100%;
+    }
+
+    .down {
+        width: 100%;
+        height: 30%;
+    }
+
+    .down a {
+        display: none;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        /* height: 100%; */
+        padding: 10px;
+        width: 100%;
+    }
+
+    .bar {
+        justify-content: space-between;
+    }
+
+    .bars span {
+        font-size: 15px !important;
+    }
+
+    .down span {
+        font-size: 15px !important;
+    }
+
+    .down {
+        width: 100%;
+    }
+
+    .down1,
+    .down2 {
+        width: 80%;
+    }
+
+    #num1 {
+        width: 35px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    #num2 {
+        width: 35px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
 }
